@@ -1,155 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume.exe</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>黑客风简历 | Hacker Resume</title>
+  <meta name="description" content="一个使用 Vanilla Web 技术构建的黑客风格个人简历页面，适用于 GitHub Pages 部署。" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn close"></span>
-                <span class="btn minimize"></span>
-                <span class="btn maximize"></span>
-            </div>
-            <span class="terminal-title">root@hacker:~$ resume.exe</span>
+  <div class="scanline"></div>
+  <div class="noise"></div>
+
+  <main class="terminal">
+    <header class="terminal-header">
+      <div class="terminal-title">root@github-pages: ~/resume</div>
+      <div class="terminal-buttons">
+        <span class="btn close"></span>
+        <span class="btn min"></span>
+        <span class="btn max"></span>
+      </div>
+    </header>
+
+    <section class="terminal-body">
+      <div id="prompt-container" class="prompt-container" aria-live="polite"></div>
+      <noscript>
+        <div class="prompt-line">
+          <span class="prompt">guest@hacker:~$</span>
+          <span class="command">cat resume.txt</span>
         </div>
-        <div class="terminal-body">
-            <div class="output">
-                <div class="line">
-                    <span class="prompt">root@hacker:~$</span>
-                    <span class="command">cat resume.txt</span>
-                </div>
-                
-                <div class="content">
-                    <div class="section">
-                        <h1 class="glitch" data-text="[ RESUME ]">[ RESUME ]</h1>
-                    </div>
+        <pre class="fallback-resume">
+姓名: 随机黑客
+角色: 全栈开发 / 安全研究员
+技能: JavaScript, Python, Linux, 网络安全, 代码审计
+项目: GitHub Pages 个人主页, CTF 平台脚本, 自动化渗透测试工具
+联系方式: hacker@example.com
+        </pre>
+      </noscript>
+    </section>
 
-                    <div class="section">
-                        <h2>>> PERSONAL_INFO</h2>
-                        <div class="info-block">
-                            <p><span class="label">NAME:</span> <span class="value">Alex Chen</span></p>
-                            <p><span class="label">TITLE:</span> <span class="value">Full Stack Developer / Security Researcher</span></p>
-                            <p><span class="label">EMAIL:</span> <span class="value">alex.chen@protonmail.com</span></p>
-                            <p><span class="label">GITHUB:</span> <span class="value">github.com/alexchen</span></p>
-                            <p><span class="label">LOCATION:</span> <span class="value">Beijing, China</span></p>
-                        </div>
-                    </div>
+    <footer class="terminal-footer">
+      <span>Vanilla Web · GitHub Pages Ready · 随机生成内容</span>
+    </footer>
+  </main>
 
-                    <div class="section">
-                        <h2>>> SKILLS</h2>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <p class="category-title">[ LANGUAGES ]</p>
-                                <p>Python, JavaScript, TypeScript, Go, Rust, C++</p>
-                            </div>
-                            <div class="skill-category">
-                                <p class="category-title">[ FRAMEWORKS ]</p>
-                                <p>React, Vue, Node.js, Express, Django, Flask</p>
-                            </div>
-                            <div class="skill-category">
-                                <p class="category-title">[ TOOLS ]</p>
-                                <p>Git, Docker, Kubernetes, AWS, Linux, Wireshark</p>
-                            </div>
-                            <div class="skill-category">
-                                <p class="category-title">[ SECURITY ]</p>
-                                <p>Penetration Testing, OWASP, Cryptography, CTF</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>>> EXPERIENCE</h2>
-                        <div class="experience-item">
-                            <p class="job-title">Senior Security Engineer</p>
-                            <p class="company">TechCorp Security | 2021 - Present</p>
-                            <ul class="job-duties">
-                                <li>Led security audits for enterprise applications</li>
-                                <li>Developed automated penetration testing tools</li>
-                                <li>Reduced security vulnerabilities by 85%</li>
-                                <li>Mentored junior security researchers</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <p class="job-title">Full Stack Developer</p>
-                            <p class="company">StartupXYZ | 2019 - 2021</p>
-                            <ul class="job-duties">
-                                <li>Built scalable web applications using React & Node.js</li>
-                                <li>Implemented microservices architecture</li>
-                                <li>Optimized database queries, improved performance by 60%</li>
-                                <li>Collaborated with cross-functional teams</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <p class="job-title">Junior Developer</p>
-                            <p class="company">DevStudio Inc | 2017 - 2019</p>
-                            <ul class="job-duties">
-                                <li>Developed RESTful APIs and frontend components</li>
-                                <li>Fixed bugs and implemented new features</li>
-                                <li>Participated in code reviews and agile sprints</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>>> EDUCATION</h2>
-                        <div class="education-item">
-                            <p class="degree">Bachelor of Science in Computer Science</p>
-                            <p class="school">Beijing University of Technology | 2013 - 2017</p>
-                            <p class="details">Focus: Cybersecurity & Software Engineering</p>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>>> PROJECTS</h2>
-                        <div class="project-item">
-                            <p class="project-name">[ Project: SecureChat ]</p>
-                            <p>End-to-end encrypted messaging application with zero-knowledge architecture</p>
-                            <p class="tech-stack">Tech: React, Node.js, WebRTC, AES-256</p>
-                        </div>
-                        <div class="project-item">
-                            <p class="project-name">[ Project: VulnScanner ]</p>
-                            <p>Automated vulnerability scanner for web applications</p>
-                            <p class="tech-stack">Tech: Python, Selenium, OWASP ZAP API</p>
-                        </div>
-                        <div class="project-item">
-                            <p class="project-name">[ Project: CTF Platform ]</p>
-                            <p>Capture The Flag competition platform with Docker containerization</p>
-                            <p class="tech-stack">Tech: Django, Docker, PostgreSQL, Redis</p>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>>> CERTIFICATIONS</h2>
-                        <ul class="cert-list">
-                            <li>OSCP - Offensive Security Certified Professional</li>
-                            <li>AWS Certified Solutions Architect</li>
-                            <li>CEH - Certified Ethical Hacker</li>
-                        </ul>
-                    </div>
-
-                    <div class="section">
-                        <h2>>> LANGUAGES</h2>
-                        <div class="languages">
-                            <p><span class="label">Chinese:</span> <span class="value">Native</span></p>
-                            <p><span class="label">English:</span> <span class="value">Fluent</span></p>
-                            <p><span class="label">Japanese:</span> <span class="value">Intermediate</span></p>
-                        </div>
-                    </div>
-
-                    <div class="section footer">
-                        <div class="cursor-blink">█</div>
-                        <p class="footer-text">Press ESC to exit | Press R to reload</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-

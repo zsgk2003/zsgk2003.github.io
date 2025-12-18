@@ -4,45 +4,123 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>黑客风简历 | Hacker Resume</title>
-  <meta name="description" content="一个使用 Vanilla Web 技术构建的黑客风格个人简历页面，适用于 GitHub Pages 部署。" />
+  <title>课题组主页 | Research Group</title>
+  <meta name="description" content="课题组官方网站，展示最新科研进展、成员信息、研究成果和新闻动态。" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="scanline"></div>
-  <div class="noise"></div>
-
-  <main class="terminal">
-    <header class="terminal-header">
-      <div class="terminal-title">root@github-pages: ~/resume</div>
-      <div class="terminal-buttons">
-        <span class="btn close"></span>
-        <span class="btn min"></span>
-        <span class="btn max"></span>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">研究组</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">首页</a></li>
+        <li><a href="members.html" class="nav-link">成员介绍</a></li>
+        <li><a href="achievements.html" class="nav-link">工作成果</a></li>
+        <li><a href="news.html" class="nav-link">新闻动态</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <section class="terminal-body">
-      <div id="prompt-container" class="prompt-container" aria-live="polite"></div>
-      <noscript>
-        <div class="prompt-line">
-          <span class="prompt">guest@hacker:~$</span>
-          <span class="command">cat resume.txt</span>
-        </div>
-        <pre class="fallback-resume">
-姓名: 随机黑客
-角色: 全栈开发 / 安全研究员
-技能: JavaScript, Python, Linux, 网络安全, 代码审计
-项目: GitHub Pages 个人主页, CTF 平台脚本, 自动化渗透测试工具
-联系方式: hacker@example.com
-        </pre>
-      </noscript>
+  <!-- 主要内容 -->
+  <main class="main-content">
+    <!-- 欢迎横幅 -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">欢迎来到我们的研究组</h1>
+        <p class="hero-subtitle">致力于前沿科学研究与技术突破</p>
+      </div>
     </section>
 
-    <footer class="terminal-footer">
-      <span>Vanilla Web · GitHub Pages Ready · 随机生成内容</span>
-    </footer>
+    <!-- 近期科研进展 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">近期科研进展</h2>
+        <div class="progress-grid">
+          <article class="progress-card">
+            <div class="card-header">
+              <span class="card-date">2024年12月</span>
+              <span class="card-tag tag-research">研究</span>
+            </div>
+            <h3 class="card-title">新型算法研究取得重要突破</h3>
+            <p class="card-content">
+              在机器学习领域，我们提出了一种全新的优化算法，该算法在多个基准数据集上取得了显著的性能提升。相关研究成果已投稿至顶级期刊。
+            </p>
+            <a href="news.html#progress-1" class="card-link">了解更多 →</a>
+          </article>
+
+          <article class="progress-card">
+            <div class="card-header">
+              <span class="card-date">2024年11月</span>
+              <span class="card-tag tag-collaboration">合作</span>
+            </div>
+            <h3 class="card-title">国际学术合作项目启动</h3>
+            <p class="card-content">
+              与国外知名大学研究团队达成合作协议，共同开展跨学科研究项目。项目聚焦于前沿技术领域，预计为期三年。
+            </p>
+            <a href="news.html#progress-2" class="card-link">了解更多 →</a>
+          </article>
+
+          <article class="progress-card">
+            <div class="card-header">
+              <span class="card-date">2024年10月</span>
+              <span class="card-tag tag-publication">发表</span>
+            </div>
+            <h3 class="card-title">论文被顶级会议接收</h3>
+            <p class="card-content">
+              研究组的最新研究成果被国际顶级会议接收。论文提出了创新的理论框架，为相关领域的研究提供了新的思路。
+            </p>
+            <a href="news.html#progress-3" class="card-link">了解更多 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 研究领域 -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">研究领域</h2>
+        <div class="research-areas">
+          <div class="area-item">
+            <div class="area-icon">🔬</div>
+            <h3 class="area-title">机器学习</h3>
+            <p class="area-desc">深度学习、强化学习、迁移学习等前沿方向</p>
+          </div>
+          <div class="area-item">
+            <div class="area-icon">💻</div>
+            <h3 class="area-title">计算机视觉</h3>
+            <p class="area-desc">图像识别、目标检测、视频分析等技术</p>
+          </div>
+          <div class="area-item">
+            <div class="area-icon">🌐</div>
+            <h3 class="area-title">数据科学</h3>
+            <p class="area-desc">大数据分析、数据挖掘、可视化技术</p>
+          </div>
+          <div class="area-item">
+            <div class="area-icon">🔒</div>
+            <h3 class="area-title">网络安全</h3>
+            <p class="area-desc">密码学、隐私保护、安全协议设计</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 研究组. 保留所有权利.</p>
+      <p class="footer-links">
+        <a href="mailto:contact@example.com">联系邮箱</a> | 
+        <a href="https://github.com">GitHub</a>
+      </p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
